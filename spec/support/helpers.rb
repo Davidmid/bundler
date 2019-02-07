@@ -41,7 +41,7 @@ module Spec
     end
 
     def out
-      last_command.stdboth
+      last_command.stdout
     end
 
     def err
