@@ -48,6 +48,10 @@ module Spec
       last_command.stderr
     end
 
+    def compat_err
+      Bundler.feature_flag.error_on_stderr? ? err : out
+    end
+
     def exitstatus
       last_command.exitstatus
     end
